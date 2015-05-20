@@ -1,0 +1,19 @@
+{
+  "name": "devon-portfolio-node",
+  "version": "1.0.0",
+  "description": "This is the theme for dhgodfrey.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonhg/dhgodfrey.net-theme.git"
+  },
+  "author": "Devon Godfrey",
+  "license": "GNU General Public License",
+  "bugs": {
+    "url": "https://github.com/devonhg/dhgodfrey.net-theme/issues"
+  },
+  "homepage": "https://github.com/devonhg/dhgodfrey.net-theme#readme"
+}

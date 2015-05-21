@@ -11,17 +11,35 @@ module.exports = function(grunt) {
         src: 'src/<%= pkg.name %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
-    }
-  });
-  
-  grunt.registerTask('speak', function(){
-	console.log("I'm speaking");
+    },
+	concat: {
+		js:{
+			src: ["src/**/*.js"],
+			dest: "build/scripts.js",
+		},	
+		css:{
+			src: ["src/**/*.css"],
+			dest: "build/styles.css",
+		}
+	},
+	watch: {
+		js: {
+			files: ['src/**/*.js'],
+			tasks: ['concat'],
+		},
+		css: {
+			files: ['src/**/*.css'],
+			tasks: ['concat'],
+		},
+	},
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['concat','watch']);
 
 };

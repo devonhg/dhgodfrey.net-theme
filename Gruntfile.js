@@ -4,17 +4,20 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      js: {
+        src: 'build/scripts.js',
+        dest: 'build/scripts.min.js'
       },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
-      }
     },
+	cssmin: {
+		css :{
+			src: 'build/styles.css',
+			dest: 'build/styles.min.css'			
+		},
+	},
 	concat: {
 		js:{
-			src: ["src/**/*.js"],
+			src: ["src/**/*.js", "js/*.js"],
 			dest: "build/scripts.js",
 		},	
 		css:{
@@ -35,8 +38,9 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).

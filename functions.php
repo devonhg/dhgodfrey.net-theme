@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'devons_theme_widgets_init' );
 function devons_theme_scripts() {
 	//Styles
 		wp_enqueue_style( 'devons-theme-style', get_stylesheet_uri() );
-		wp_enqueue_style( 'devons-theme-style', get_stylesheet_uri(). "/build/styles.min.css" );
+		wp_enqueue_style( 'devons-theme-build', get_template_directory_uri(). "/build/styles.min.css" );
 		wp_enqueue_style('twitter-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
 		wp_enqueue_style('twitter-opt-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css');
 

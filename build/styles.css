@@ -1,6 +1,19 @@
 /*
 	This is from a sass file! Still from sass file!
 */
+/*
+	This is the properties files, mostly for classes that have attributes 
+	for inheritence. 
+*/
+.p-inline-center, .main-nav-style .menu-main-menu-container {
+  display: inline-block;
+  margin: 0 auto; }
+
+/*
+	Mixins
+*/
+.main-nav-style {
+  text-align: center; }
 
 /*# sourceMappingURL=sass.css.map */
 

@@ -1,3 +1,11 @@
 /*
 	This is from a sass file! Still from sass file!
 */
+@import 'properties';
+@import 'mixins';
+
+//Main Menu Object
+.main-nav-style{
+	text-align: center; 
+	.menu-main-menu-container { @extend .p-inline-center }
+}

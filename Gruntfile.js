@@ -34,10 +34,6 @@ module.exports = function(grunt) {
 			files: ['src/**/*.css'],
 			tasks: ['concat', 'cssmin', 'uglify'],
 		},
-		usf:{
-			files: ['js/*.js'],
-			tasks: ['concat', 'cssmin', 'uglify'],			
-		},
 	},
   });
 
@@ -48,6 +44,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat','watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin','watch']);
 
 };

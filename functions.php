@@ -15,6 +15,15 @@ if ( ! function_exists( 'devons_theme_setup' ) ) :
  */
 function devons_theme_setup() {
 
+	/*Add theme support for custom header*/
+	$args = array(
+	'width'         => 2000,
+	'height'        => 500,
+	'default-image' => get_template_directory_uri() . '/images/header-base.jpg',
+	);
+	add_theme_support( 'custom-header', $args );
+
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -98,6 +107,16 @@ function devons_theme_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Header Sidebar', 'devons-theme' ),
+		'id'            => 'header-sidebar',
+		'description'   => 'Refrain from putting in more than one widget.',
+		'before_widget' => '<aside id="%1$s" class="widget-header %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'devons_theme_widgets_init' );
 
@@ -110,7 +129,8 @@ function devons_theme_scripts() {
 		wp_enqueue_style( 'devons-theme-build', get_template_directory_uri(). "/build/styles.min.css" );
 		wp_enqueue_style('twitter-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
 		wp_enqueue_style('twitter-opt-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css');
-
+		wp_register_style('wpb-googleFonts', 'http://fonts.googleapis.com/css?family=Oswald|Source+Code+Pro|Cousine');
+	    wp_enqueue_style( 'wpb-googleFonts');
 	wp_enqueue_script( 'devons-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	//Scripts
 		wp_enqueue_script( 'devons-theme-js', get_template_directory_uri() . '/build/scripts.min.js', array(), '20120206', true );

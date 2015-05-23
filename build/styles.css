@@ -1,19 +1,161 @@
 /*
-	This is from a sass file! Still from sass file!
-*/
-/*
 	This is the properties files, mostly for classes that have attributes 
 	for inheritence. 
 */
-.p-inline-center, .main-nav-style .menu-main-menu-container {
+.p-inline-center, #masthead .main-nav-style .menu-main-menu-container {
   display: inline-block;
   margin: 0 auto; }
 
+.p-def-padding, .p-att-button, #masthead .widget-area-header a, #content #primary .entry-title a, #content #primary .entry-title label, .p-banner, #content #primary .entry-title, #content #secondary .widget-title, #masthead .main-nav-style li a, #masthead .widget-area-header, #content #primary, #content #primary article.page .entry-content,
+#content #primary article.post .entry-content {
+  padding: 10px; }
+
+.p-col-centered {
+  float: none;
+  margin: 0 auto; }
+
+.p-button-reset, #masthead .main-nav-style .menu-toggle {
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none; }
+
+.p-def-pad-bottom, #masthead, #masthead .main-nav-style, #content #primary .entry-title {
+  margin-bottom: 25px; }
+
+.p-menu-highlight, #masthead .main-nav-style li a:hover {
+  background-color: #bedbdb;
+  border-radius: 3px; }
+
+.p-att-button, #masthead .widget-area-header a, #content #primary .entry-title a, #content #primary .entry-title label {
+  background: #ec502c;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Oswald';
+  font-weight: normal; }
+
+.p-banner, #content #primary .entry-title, #content #secondary .widget-title {
+  background: #dfeded;
+  color: #539494;
+  border-left: 6px solid #539494;
+  border-radius: 4px; }
+
+@media screen and (max-width: 599px) {
+  .p-mobile-reset, #masthead .main-nav-style .menu-main-menu-container, #masthead .site-branding .site-title,
+  #masthead .site-branding .site-description, #masthead .widget-area-header {
+    width: 100%;
+    display: block;
+    float: none; } }
 /*
 	Mixins
 */
-.main-nav-style {
-  text-align: center; }
+@font-face {
+  font-family: "Calig1";
+  src: url("/fonts/0racccd.TTF") format("truetype"); }
+@font-face {
+  font-family: "Calig2";
+  src: url("/fonts/rac1etch.ttf") format("truetype"); }
+@font-face {
+  font-family: "Calig3";
+  src: url("/fonts/Scooby Doo.ttf") format("truetype"); }
+#masthead {
+  border-bottom: 10px dashed #bedbdb; }
+  #masthead a {
+    color: #ec502c; }
+  #masthead a:hover {
+    text-decoration: none; }
+  #masthead a:focus {
+    text-decoration: none; }
+
+#masthead .main-nav-style {
+  text-align: center;
+  background-color: #dfeded;
+  border-bottom: 4px solid #bedbdb;
+  font-size: 150%; }
+  #masthead .main-nav-style li a {
+    margin-right: 12px;
+    font-weight: bold;
+    color: #539494;
+    font-family: "Cousine";
+    text-transform: uppercase; }
+  #masthead .main-nav-style li a:hover {
+    text-decoration: none; }
+  #masthead .main-nav-style li a:focus {
+    text-decoration: none; }
+  #masthead .main-nav-style .current-menu-item a {
+    border-bottom: 3px solid #aed1d1; }
+  #masthead .main-nav-style li:last-child a {
+    margin-right: 0; }
+  #masthead .main-nav-style .menu-toggle {
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 0px;
+    background-color: #bedbdb;
+    color: #539494;
+    font-weight: bold;
+    font-size: 150%; }
+  @media screen and (max-width: 599px) {
+    #masthead .main-nav-style {
+      float: none; }
+      #masthead .main-nav-style li {
+        width: 100%;
+        float: none;
+        margin-bottom: 5px; }
+      #masthead .main-nav-style li a {
+        width: 100%;
+        margin: 0;
+        font-size: 200%; }
+      #masthead .main-nav-style .current-menu-item a {
+        border-bottom: none; } }
+
+#masthead .site-branding {
+  font-family: "Source Code Pro";
+  display: inline; }
+  #masthead .site-branding h1, #masthead .site-branding h3 {
+    display: inline; }
+  @media screen and (max-width: 599px) {
+    #masthead .site-branding li {
+      width: 100%;
+      float: none;
+      margin-bottom: 5px; }
+    #masthead .site-branding li a {
+      width: 100%;
+      margin: 0;
+      font-size: 200%; } }
+
+#masthead .widget-area-header {
+  float: right; }
+
+#masthead .header-back {
+  min-height: 300px;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#content a {
+  color: #ec502c; }
+#content a:hover {
+  text-decoration: none; }
+#content a:focus {
+  text-decoration: none; }
+#content #primary article.page,
+#content #primary article.post {
+  border-bottom: 3px solid #dfeded; }
+#content #primary .entry-title {
+  /*background: $primary-color;
+  color: darken( $primary-color, 45% );
+  border-left: 6px solid darken( $primary-color, 45% );
+  border-radius: 4px; */ }
+  #content #primary .entry-title a, #content #primary .entry-title label {
+    display: inline;
+    background-color: #ee6343; }
+#content #primary img {
+  border-radius: 5px; }
+@media screen and (max-width: 599px) {
+  #content #primary .entry-title a, #content #primary .entry-title label {
+    background-color: transparent;
+    color: #539494; } }
 
 /*# sourceMappingURL=sass.css.map */
 

@@ -33,7 +33,7 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<div class="col-sm-4">
+		<div id='secondary' class="col-sm-4">
 			<?php get_sidebar(); ?>
 		</div>
 	</div>

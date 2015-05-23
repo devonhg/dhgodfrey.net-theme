@@ -20,17 +20,26 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'devons-theme' ); ?></a>
-
 	<header id="masthead" class="site-header text-center" role="banner">
 		<nav id="site-navigation" class="main-navigation main-nav-style" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'devons-theme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container-class', 'text-center' ) ); ?>
+			<button class="menu-toggle p-col-centered" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'devons-theme' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container-class' => 'text-center' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
-		</div><!-- .site-branding -->
+		<div style='background-image: url("<?php header_image(); ?>")' class='header-back'>
+			<div class="site-branding">
+				<h1 class="site-title"><label>{</label><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo str_replace( " ", "_", get_bloginfo( 'name' ) ); ?></a><label>}</label></h1>
+				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
+			</div><!-- .site-branding -->
+
+			<?php 
+				if ( is_active_sidebar( 'header-sidebar' ) ) {?>
+					<div class="widget-area-header" role="complementary">
+						<?php dynamic_sidebar( 'header-sidebar' ); ?>
+					</div><!-- #secondary -->
+				<?php }
+			?>
+		</div>
 
 
 	</header><!-- #masthead -->

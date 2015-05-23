@@ -1,11 +1,17 @@
-/*
-	This is from a sass file! Still from sass file!
-*/
-@import 'properties';
-@import 'mixins';
+//Variables
+	$primary-color: #dfeded;
+	$secondary-color: #ec502c;
+	$tertiary-color: #eee;
+	$mobile-size: 599px; 
 
-//Main Menu Object
-.main-nav-style{
-	text-align: center; 
-	.menu-main-menu-container { @extend .p-inline-center }
-}
+//Imports - Tools
+	@import 'properties';
+	@import 'mixins';
+	@import 'fonts';
+
+//General Site Rules
+
+
+//Imports - Components
+	@import 'site-header';
+	@import 'site-content';

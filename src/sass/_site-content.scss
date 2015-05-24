@@ -12,6 +12,7 @@
 //Primary Area
 	#primary{
 		@extend .p-def-padding;
+		font-size: 120%;
 
 		article.page,
 		article.post{
@@ -35,16 +36,21 @@
 
 		img{
 			border-radius: 5px; 
+			box-shadow: 10px 10px 5px rgba(0,0,0,.2);
 		}
 
 	}
 //Secondary area
 	#secondary{
-
+		margin-top: 10px;
 		.widget-title{
 			@extend .p-banner; 
 		}
+
+		font-size: 120%;
 	}
+	
+
 
 	//Mobile
 		@media screen and (max-width: $mobile-size){
@@ -55,6 +61,10 @@
 						color: darken($primary-color, 45%);
 					}
 				}
+			}
+
+			#secondary a{
+				font-size: 150%;
 			}
 		}
 

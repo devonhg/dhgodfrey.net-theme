@@ -25,6 +25,11 @@
 			
 
 		//"Methods"
+			.menu{
+				//display: inline-block;
+				margin: 0 auto;				
+			}
+
 			.menu-main-menu-container { @extend .p-inline-center }
 
 			li a{
@@ -48,12 +53,15 @@
 			}
 
 			.menu-toggle{
+
+				//background-color: darken( $primary-color, 10% );
+				//color: darken( $primary-color, 45% );
+				//font-weight: bold; 
+				//
+				@extend .p-att-button;
 				margin-bottom: 15px; 
 				height: 50px;
 				line-height: 0px; 
-				background-color: darken( $primary-color, 10% );
-				color: darken( $primary-color, 45% );
-				font-weight: bold; 
 				font-size: 150%;
 				@extend .p-button-reset;
 
@@ -75,6 +83,10 @@
 				}
 				.current-menu-item a{
 					border-bottom: none;
+				}
+				.menu{
+					//display: inherit;
+					margin: 0;		
 				}
 
 				float: none; 

@@ -6,7 +6,7 @@
   display: inline-block;
   margin: 0 auto; }
 
-.p-def-padding, .p-att-button, #masthead .main-nav-style .menu-toggle, #masthead .widget-area-header a, #content #primary .entry-title a, #content #primary .entry-title label, .p-banner, #content #primary .entry-title, #content #secondary .widget-title, #masthead .main-nav-style li a, #masthead .widget-area-header, #content #primary, #content #primary article.page .entry-content,
+.p-def-padding, .p-att-button, #masthead .main-nav-style .menu-toggle, #masthead .widget-area-header a, #content input.submit, #content #primary .entry-title a, #content #primary .entry-title label, .p-banner, #content #primary .entry-title, #content #secondary .widget-title, #masthead .main-nav-style li a, #masthead .widget-area-header, #content #primary, #content #primary article.page .entry-content,
 #content #primary article.post .entry-content {
   padding: 10px; }
 
@@ -14,7 +14,7 @@
   float: none;
   margin: 0 auto; }
 
-.p-button-reset, #masthead .main-nav-style .menu-toggle {
+.p-button-reset, #masthead .main-nav-style .menu-toggle, #content input.submit {
   border: none;
   -webkit-appearance: none;
   outline: none;
@@ -28,7 +28,7 @@
   background-color: #bedbdb;
   border-radius: 3px; }
 
-.p-att-button, #masthead .main-nav-style .menu-toggle, #masthead .widget-area-header a, #content #primary .entry-title a, #content #primary .entry-title label {
+.p-att-button, #masthead .main-nav-style .menu-toggle, #masthead .widget-area-header a, #content input.submit, #content #primary .entry-title a, #content #primary .entry-title label {
   background: #ec502c;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   color: #fff;

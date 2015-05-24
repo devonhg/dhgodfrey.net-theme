@@ -9,6 +9,12 @@
 		text-decoration: none; 
 	}
 
+//Buttons
+	input.submit{
+		@extend .p-button-reset;
+		@extend .p-att-button;
+	}
+
 //Primary Area
 	#primary{
 		@extend .p-def-padding;

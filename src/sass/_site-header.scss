@@ -119,8 +119,9 @@
 
 //Widget area object
 	#masthead .widget-area-header{
-		float: right; 
-		@extend .p-def-padding;
+		//float: right; 
+		//@extend .p-def-padding;
+		padding: 30px;
 		
 		a{
 			@extend .p-att-button;
@@ -132,7 +133,7 @@
 
 //Background Object
 	#masthead .header-back{
-		min-height: 300px; 
+		min-height: 240px; 
 		background-position: center; 
 		background-repeat: no-repeat; 
 	}

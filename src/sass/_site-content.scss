@@ -35,7 +35,9 @@
 			a,label { 
 				@extend .p-att-button; 
 				display: inline; 
-				background-color: lighten( $secondary-color, 5%);
+				background-color: darken( $primary-color, 45%);
+			}a{
+				background-color: $secondary-color;
 			}
 			@extend .p-def-pad-bottom;
 		}

@@ -28,7 +28,7 @@
 
 		<div style='background-image: url("<?php header_image(); ?>")' class='header-back'>
 			<div class="site-branding">
-				<h1 class="site-title"><label>{</label><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo str_replace( " ", "_", get_bloginfo( 'name' ) ); ?></a><label>}</label></h1>
+				<h1 class="site-title"><label>{</label><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_bloginfo( 'name' ) ; ?></a><label>}</label></h1>
 				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 			</div><!-- .site-branding -->
 

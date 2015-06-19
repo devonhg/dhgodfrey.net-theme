@@ -109,13 +109,15 @@
       #masthead .main-nav-style .current-menu-item a {
         border-bottom: none; }
       #masthead .main-nav-style .menu {
-        margin: 0; } }
+        margin: 0; }
+      #masthead .main-nav-style .menu-toggle {
+        width: 100%; } }
 
 #masthead .site-branding {
   font-family: "Source Code Pro";
   display: inline; }
   #masthead .site-branding h1, #masthead .site-branding h3 {
-    display: inline; }
+    /*display: inline;*/ }
   @media screen and (max-width: 599px) {
     #masthead .site-branding li {
       width: 100%;
@@ -124,7 +126,9 @@
     #masthead .site-branding li a {
       width: 100%;
       margin: 0;
-      font-size: 200%; } }
+      font-size: 200%; }
+    #masthead .site-branding .site-title label {
+      width: 100%; } }
 
 #masthead .widget-area-header {
   padding: 30px; }

@@ -89,6 +89,10 @@
 					margin: 0;		
 				}
 
+				.menu-toggle{
+					width: 100%;
+				}
+
 				float: none; 
 			}
 	}
@@ -97,7 +101,9 @@
 	#masthead .site-branding{
 		font-family: 'Source Code Pro', ;
 		display: inline; 
-		h1, h3{ display: inline; }
+		h1, h3{/*display: inline;*/ }
+
+
 
 		//Mobile
 			@media screen and (max-width: $mobile-size) {
@@ -113,6 +119,10 @@
 					width: 100%;
 					margin: 0; 
 					font-size: 200%;
+				}
+
+				.site-title label{
+					width: 100%;
 				}
 			}
 	}

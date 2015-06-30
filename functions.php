@@ -117,6 +117,16 @@ function devons_theme_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Upper Sidebar', 'devons-theme' ),
+		'id'            => 'upper-sidebar',
+		'description'   => 'Refrain from putting in more than one widget.',
+		'before_widget' => '<aside id="%1$s" class="widget-header %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'devons_theme_widgets_init' );
 

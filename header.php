@@ -43,5 +43,12 @@
 
 
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">
+
+	<?php 
+		if ( is_active_sidebar( 'upper-sidebar' ) ) {?>
+			<div class="widget-area-header" role="complementary">
+				<?php dynamic_sidebar( 'upper-sidebar' ); ?>
+			</div><!-- #secondary -->
+		<?php }
+	?>
